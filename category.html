@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/category.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/categories.js"></script>
+    <script src="./js/template-native.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="./images/header_logo.png" alt="">
+        </a>
+        <a href="#" class="app">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </header>
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </div>
+    <div class="category">
+        <div class="lists">
+            
+        </div>
+        
+    </div>
+
+    <footer>
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">
+            <img src="./images/top.jpg" alt="">
+            返回顶部
+        </a>
+        <p>
+            <a href="javascript:;">手机app下载</a>
+            <a href="javascript:;">慢慢买手机版</a>-- 掌上比价平台
+            
+        </p>
+        <p>m.manmanbuy.com </p>
+    </footer>
+
+</body>
+</html>
+<script type="text/template" id="list">   
+    <% for(var i=0;i<result.length;i++){%>
+    <a href="javascript:;" data-titleid='<%=result[i].titleId %>' class="cateList"><%=result[i].title%></a> 
+    <ul class="items"></ul>   
+   <% }%>
+    
+</script>
+
+
+<script type="text/template" id="items">
+    <% for(var i=0;i<result.length;i++) {%>
+                    
+    <a href="cateList.html?categoryId=<%=result[i].categoryId%>&category=<%=result[i].category%>" class="itemLists"  data-categoryid="<%=result[i].categoryId%>"><%=result[i].category%></a> 
+   
+    <% }%>
+</script>
+

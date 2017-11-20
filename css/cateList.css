@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul li {
+  list-style: none;
+}
+header {
+  height: 50px;
+  background-color: #ff841d;
+  padding: 10px;
+}
+header .logo {
+  float: left;
+}
+header .logo img {
+  height: 25px;
+}
+header .app {
+  float: right;
+}
+header .app img {
+  height: 34px;
+}
+.search {
+  margin-top: 10px;
+  height: 40px;
+}
+.search input {
+  border: none;
+  border-radius: 15px;
+  height: 35px;
+  font-size: 14px;
+}
+.search input:nth-child(1) {
+  background-color: #f1f1f1;
+  width: 280px;
+  margin-left: 10px;
+  text-indent: 1em;
+}
+.search input:nth-child(2) {
+  background-color: #ff841d;
+  width: 65px;
+  margin-left: 5px;
+  color: #fff;
+}
+.productTitle {
+  height: 35px;
+  line-height: 35px;
+  background: #f5f5f5;
+}
+.productTitle ul li {
+  float: left;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.productTitle .chooseBtn {
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 54px;
+  height: 30px;
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 15px;
+  border-radius: 5px;
+  display: block;
+  float: right;
+}
+.product .media {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  padding-bottom: 0;
+}
+.product .media .media-left {
+  float: left;
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+.product .media-body {
+  display: table-cell;
+  vertical-align: center;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.product .media-body h5 {
+  font-weight: normal;
+}
+.product .media-body .price {
+  padding: 10px 0;
+  color: red;
+}
+.product .media-body span {
+  color: #666;
+  font-size: 12px;
+}
+.product_page .btn1 {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  outline: none;
+}
+.product_page .pre {
+  float: left;
+}
+.product_page .next {
+  float: right;
+}
+.product_page .btn-group > .btn:first-child {
+  margin-left: 76px;
+}
+.product_page .dropdown-menu {
+  left: 73px;
+  min-width: 0;
+}

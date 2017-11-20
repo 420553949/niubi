@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/productDetail.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/productDetail.js"></script>
+    <script src="./js/template.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+        <img src="./images/header_logo.png" alt="">
+        </a>
+        <a href="#" class="app">
+        <img src="./images/header_app.png" alt="">
+        </a>
+    </header>
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+    <input type="button" value="搜索">
+     </div>
+    <div class="productTitle">
+        <ul>
+           <li><a href="index.html">首页 ></a></li>
+           <li class="cateBack"><a href="category.html">分类大全 ></a></li>
+           <li>乐视TV ></li>
+           </ul>
+        <a href="javascript:;" class="chooseBtn">筛选</a>  
+    </div>
+    <!-- 产品信息 -->
+    <div class="productInfo">
+
+    </div>
+    <!-- 评价 -->
+    <div class="product-com-title">
+            <div>网友评价</div>
+    </div>
+    <div class="product_Comment">
+            
+   </div>
+   <div class="more">
+    <a class="morein" href="javascript:;">查看更多评价</a>
+    </div>
+    <footer>
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">
+            <img src="./images/top.jpg" alt="">
+            返回顶部
+        </a>
+        <p>
+            <a href="javascript:;">手机app下载</a>
+            <a href="javascript:;">慢慢买手机版</a>-- 掌上比价平台
+            
+        </p>
+        <p>m.manmanbuy.com </p>
+    </footer> 
+</body>
+</html>
+<script type="text/template" id="Info">
+    {{each result as value}}
+    <div class="product-bijia"> 
+            <div class="product-name">
+               {{value.productName}}
+            </div>
+            <div class="product-img">
+                {{#value.productImg}}
+            </div>
+            <div class="product-collect">
+                <a href="javascript:setfav(473088);">
+                    <img src="http://www.zuyushop.com/wap/images/sc.jpg" width="39" height="39"></a>
+            </div>
+            <div class="plist">                   </div>
+        </div>    
+        {{/each}}
+</script>
+
+<script type="text/template" id="price">
+    {{each result as value}}
+    <a href="#">{{#value.bjShop}}</a>
+    <div class="note">
+        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+    </div>
+    {{/each}}
+</script>
+
+<script type="text/template" id="comment">
+    {{each result as value}}
+    <li>
+            <div class="clearfix">
+                 <span class="pull-left com-name">{{value.comName}}     </span>
+                <span class="pull-right com-time">{{value.comTime}}      </span></div>
+            <div class="clearfix"> <span class="star pull-left com-star"><em class="star5"></em></span> <span class="pull-right com-from">{{value.comFrom}}</span></div>
+            <div class="com-content">{{value.comContent}}</div>
+        </li>
+    {{/each}}
+</script>

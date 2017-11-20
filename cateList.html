@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/cateList.css">
+    
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="./js/cateList.js"></script>
+    
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="./images/header_logo.png" alt="">
+        </a>
+        <a href="#" class="app">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </header>
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </div>
+    <div class="productTitle">
+        
+        <a href="javascript:;" class="chooseBtn">筛选</a>  
+    </div>
+    <div class="product">
+        
+    </div>
+    <div class="product_page">
+        <input type="button" value="上一页" class="btn1 pre">
+        <!-- 中间按钮 -->
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle middle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             第一页
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#" value="1">第一页</a></li>
+              <li><a href="#" value="2">第二页</a></li>
+              <li><a href="#" value="3">第三页</a></li>
+            </ul>
+          </div>
+
+        <input type="button" value="下一页" class="btn1 next" >
+    </div>
+</body>
+</html>
+<script type="text/template" id="productList">
+    {{each result as value}}
+    <div class="media">        
+            <a href="javascript:;" class="media-left">
+                 {{#value.productImg}}
+            </a>
+            <div class="media-body">
+                <a href="productDetail.html?productId={{value.productId}}">
+                    <h5>{{value.productName}}</h5>
+                    <p class="price">{{value.productPrice}}</p>
+                    <span>{{value.productQuote}}</span>
+                    <span>{{value.productCom}}</span>
+                </a>
+            </div>  
+    </div>    
+    {{/each}}
+</script>
+<script type="text/template" id="name">
+    {{each result as value}}
+    <ul>
+        <li><a href="index.html">首页 ></a></li>
+        <li class="cateBack"><a href="category.html">分类大全 ></a></li>
+        <li>{{value.category}} ></li>
+    </ul>
+    {{/each}}
+</script>

@@ -1,0 +1,122 @@
+@import url("./base.less");
+
+header{
+    height: 50px;
+    background-color: #ff841d;
+    padding: 10px;
+    .logo{
+        float: left;
+        img{
+            height: 25px;
+        }
+    }
+    .app{
+        float: right;
+        img{
+            height: 34px;
+        }
+    }
+    
+}
+.search{
+    margin-top: 10px;
+    height: 40px;
+    // line-height: 50px;
+    input{
+        border: none;
+        border-radius: 15px;
+        height: 35px;
+        font-size: 14px;
+    }
+    input:nth-child(1){
+        background-color: #f1f1f1;
+        width: 280px;
+        margin-left: 10px;
+        text-indent: 1em;
+    }
+    input:nth-child(2){
+        background-color:  #ff841d;
+        width: 65px;
+        margin-left: 5px;
+        color: #fff;
+    }
+}
+.productTitle{
+    height: 35px;
+    line-height: 35px;
+    background: #f5f5f5;
+    ul li{
+        float: left;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    .chooseBtn{
+        border: 1px solid #ccc;
+        background: #fff;
+        width: 54px;
+        height: 30px;
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        margin-right: 15px;
+        border-radius: 5px;
+        display: block;
+        float: right;
+    }
+}
+.product{
+  
+    .media{
+        border-bottom: 1px solid #ccc;
+    //    height: 120px;
+        padding: 10px;
+        padding-bottom: 0;
+        .media-left{
+            float: left;
+            width: 100px;
+            height: 100px;
+            display: block;
+        }
+    }
+    .media-body{
+        display:table-cell;
+        vertical-align: center;
+        padding-left: 10px;
+        padding-top: 10px;
+        h5{
+            font-weight: normal;
+        }
+        .price{
+            padding: 10px 0;
+            color:red;
+        }
+        span{
+            color:#666;
+            font-size: 12px;
+        }
+    }
+    
+}
+.product_page{
+    .btn1{
+        border: 1px solid #ccc;
+        background: #fff;
+        padding: 6px 12px;
+        border-radius: 5px;
+        outline: none; 
+    }
+    .pre{
+        float: left;
+    }
+    .next{
+        float: right;
+    }
+    .btn-group>.btn:first-child {
+        margin-left: 76px;
+    }
+    .dropdown-menu{
+        left:73px;
+        min-width: 0;
+    }
+}

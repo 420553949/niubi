@@ -1,0 +1,16 @@
+项目文档总结：
+陈鸿彬负责 比价搜索=查历史价=口碑排行。
+遇到的问题：
+1.点击事件获取id 出现问题
+ 解决：通过自定义属性data-xxxid   在JS里面用$(this).data("xxxid");
+2.获取url参数
+	
+解决：
+//获取URL参数
+function GetQueryString(name)
+{
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null)return  unescape(r[2]); return null;
+}
+通过此方法调用函数，传入要获取的参数id字符串
